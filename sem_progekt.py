@@ -32,7 +32,7 @@ def add():  # Функция добавления задачи
 
 
 def show_list():  # Функция просмотра списка задач
-
+ text_list_of_tasks.configure(state=NORMAL)  # Меняем конфигурацию для редактирования
     text_list_of_tasks.delete(1.0, END)  # удаляем содержимое
     try:
         button_ready_to_remove.place_forget()  # Размещаем кнопки и Text
@@ -56,7 +56,7 @@ def show_list():  # Функция просмотра списка задач
                                                                                                           'category']) + " " + "Дата: " + str(
                 todo['time']) + '\n')
           
-
+            text_list_of_tasks.configure(state=DISABLED)
 
 
 
@@ -86,7 +86,7 @@ def first_open_tasks(): #функция срабатывает при откры
             text_list_of_tasks.configure(state=NORMAL)
             text_list_of_tasks.insert(1.0, "Задача: " + todo['task'] + " " + "Категория: " + todo[
                 'category'] + " " + "Дата: " + todo['time'] + '\n')
-          
+             text_list_of_tasks.configure(state=DISABLED)
     except Exception as ex:
         print(ex)
 
