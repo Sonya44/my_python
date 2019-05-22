@@ -45,7 +45,7 @@ def show_list():  # Функция просмотра списка задач
             text_list_of_tasks.configure(state=NORMAL)
             text_list_of_tasks.insert(1.0, "Задача: " + todo['task'] + " " + "Категория: " + todo[
                 'category'] + " " + "Дата: " + todo['time'] + '\n')
-          
+        text_list_of_tasks.configure(state=DISABLED)  
 
     except:
         with open('todolist.json', 'r', encoding='cp1251') as json_file:
