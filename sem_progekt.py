@@ -129,7 +129,4 @@ button_list_of_tasks = Button(frame3, text="Список задач", width=13, 
 button_list_of_tasks.place(x=180, y=25)
 
 
-
-first_open_tasks()
-
 root.mainloop()
